@@ -265,6 +265,7 @@
             this.Controls.Add(this.painelFormularioCadastrarFuncionario);
             this.Controls.Add(this.painelLateralEsquerdo);
             this.Controls.Add(this.painelLateralDireito);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCadastrarUsuario";
             this.Text = "Cadastrar Funcionário";

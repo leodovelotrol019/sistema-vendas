@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formPrincipal));
             this.menuPrincipal = new System.Windows.Forms.MenuStrip();
             this.menuHome = new System.Windows.Forms.ToolStripMenuItem();
             this.submenuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSair = new System.Windows.Forms.ToolStripMenuItem();
             this.painelMenuSuperior = new System.Windows.Forms.Panel();
+            this.Chamados = new System.Windows.Forms.Button();
             this.botao_funcionarios = new System.Windows.Forms.Button();
             this.menuCalculadora = new System.Windows.Forms.Button();
             this.botao_shop = new System.Windows.Forms.Button();
@@ -41,11 +41,9 @@
             this.botao_adicionar_itens = new System.Windows.Forms.Button();
             this.botao_fatura = new System.Windows.Forms.Button();
             this.botao_registrar = new System.Windows.Forms.Button();
-            this.img_fundo = new System.Windows.Forms.PictureBox();
-            this.Chamados = new System.Windows.Forms.Button();
+            this.painel_principal = new System.Windows.Forms.Panel();
             this.menuPrincipal.SuspendLayout();
             this.painelMenuSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.img_fundo)).BeginInit();
             this.SuspendLayout();
             // 
             // menuPrincipal
@@ -98,6 +96,20 @@
             this.painelMenuSuperior.Name = "painelMenuSuperior";
             this.painelMenuSuperior.Size = new System.Drawing.Size(963, 59);
             this.painelMenuSuperior.TabIndex = 1;
+            // 
+            // Chamados
+            // 
+            this.Chamados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Chamados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chamados.ForeColor = System.Drawing.Color.White;
+            this.Chamados.Location = new System.Drawing.Point(710, 11);
+            this.Chamados.Margin = new System.Windows.Forms.Padding(2);
+            this.Chamados.Name = "Chamados";
+            this.Chamados.Size = new System.Drawing.Size(114, 37);
+            this.Chamados.TabIndex = 2;
+            this.Chamados.Text = "Chamados";
+            this.Chamados.UseVisualStyleBackColor = true;
+            this.Chamados.Click += new System.EventHandler(this.Chamados_Click);
             // 
             // botao_funcionarios
             // 
@@ -192,31 +204,13 @@
             this.botao_registrar.Text = "Registrar";
             this.botao_registrar.UseVisualStyleBackColor = true;
             // 
-            // img_fundo
+            // painel_principal
             // 
-            this.img_fundo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.img_fundo.Image = ((System.Drawing.Image)(resources.GetObject("img_fundo.Image")));
-            this.img_fundo.Location = new System.Drawing.Point(0, 83);
-            this.img_fundo.Margin = new System.Windows.Forms.Padding(2);
-            this.img_fundo.Name = "img_fundo";
-            this.img_fundo.Size = new System.Drawing.Size(963, 487);
-            this.img_fundo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.img_fundo.TabIndex = 3;
-            this.img_fundo.TabStop = false;
-            // 
-            // Chamados
-            // 
-            this.Chamados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Chamados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chamados.ForeColor = System.Drawing.Color.White;
-            this.Chamados.Location = new System.Drawing.Point(710, 11);
-            this.Chamados.Margin = new System.Windows.Forms.Padding(2);
-            this.Chamados.Name = "Chamados";
-            this.Chamados.Size = new System.Drawing.Size(114, 37);
-            this.Chamados.TabIndex = 2;
-            this.Chamados.Text = "Chamados";
-            this.Chamados.UseVisualStyleBackColor = true;
-            this.Chamados.Click += new System.EventHandler(this.Chamados_Click);
+            this.painel_principal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.painel_principal.Location = new System.Drawing.Point(0, 83);
+            this.painel_principal.Name = "painel_principal";
+            this.painel_principal.Size = new System.Drawing.Size(963, 487);
+            this.painel_principal.TabIndex = 2;
             // 
             // formPrincipal
             // 
@@ -224,7 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(963, 570);
-            this.Controls.Add(this.img_fundo);
+            this.Controls.Add(this.painel_principal);
             this.Controls.Add(this.painelMenuSuperior);
             this.Controls.Add(this.menuPrincipal);
             this.MainMenuStrip = this.menuPrincipal;
@@ -235,7 +229,6 @@
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();
             this.painelMenuSuperior.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.img_fundo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,10 +246,10 @@
         private System.Windows.Forms.Button botao_shop;
         private System.Windows.Forms.Button botao_produtos;
         private System.Windows.Forms.Button botao_adicionar_itens;
-        private System.Windows.Forms.PictureBox img_fundo;
         private System.Windows.Forms.Button menuCalculadora;
         private System.Windows.Forms.Button botao_funcionarios;
         private System.Windows.Forms.Button Chamados;
+        private System.Windows.Forms.Panel painel_principal;
     }
 }
 

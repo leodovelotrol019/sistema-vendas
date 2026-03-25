@@ -30,6 +30,7 @@
         {
             this.labelListagemFuncionarios = new System.Windows.Forms.Label();
             this.botao_cadastrar_funcionario = new System.Windows.Forms.Button();
+            this.painel_principal = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // labelListagemFuncionarios
@@ -53,13 +54,21 @@
             this.botao_cadastrar_funcionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botao_cadastrar_funcionario.ForeColor = System.Drawing.Color.White;
             this.botao_cadastrar_funcionario.Location = new System.Drawing.Point(1291, 30);
-            this.botao_cadastrar_funcionario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.botao_cadastrar_funcionario.Margin = new System.Windows.Forms.Padding(2);
             this.botao_cadastrar_funcionario.Name = "botao_cadastrar_funcionario";
             this.botao_cadastrar_funcionario.Size = new System.Drawing.Size(114, 38);
             this.botao_cadastrar_funcionario.TabIndex = 1;
             this.botao_cadastrar_funcionario.Text = "Cadastrar";
             this.botao_cadastrar_funcionario.UseVisualStyleBackColor = false;
             this.botao_cadastrar_funcionario.Click += new System.EventHandler(this.botao_cadastrar_funcionario_Click);
+            // 
+            // painel_principal
+            // 
+            this.painel_principal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.painel_principal.Location = new System.Drawing.Point(0, 0);
+            this.painel_principal.Name = "painel_principal";
+            this.painel_principal.Size = new System.Drawing.Size(1426, 839);
+            this.painel_principal.TabIndex = 2;
             // 
             // FormFuncionarios
             // 
@@ -68,7 +77,9 @@
             this.ClientSize = new System.Drawing.Size(1426, 839);
             this.Controls.Add(this.botao_cadastrar_funcionario);
             this.Controls.Add(this.labelListagemFuncionarios);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.painel_principal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormFuncionarios";
             this.Text = "Funcionários";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -81,5 +92,6 @@
 
         private System.Windows.Forms.Label labelListagemFuncionarios;
         private System.Windows.Forms.Button botao_cadastrar_funcionario;
+        private System.Windows.Forms.Panel painel_principal;
     }
 }

@@ -28,7 +28,13 @@ namespace sistema_vendas
         private void botao_funcionarios_Click(object sender, EventArgs e)
         {
             FormFuncionarios tela_funcionarios = new FormFuncionarios();
-            tela_funcionarios.ShowDialog();
+            painel_principal.Controls.Clear();
+            tela_funcionarios.Dock = DockStyle.Fill;
+            tela_funcionarios.TopLevel = false;
+
+            painel_principal.Controls.Add(tela_funcionarios);
+            tela_funcionarios.Show();
+
         }
 
         private void Chamados_Click(object sender, EventArgs e)
