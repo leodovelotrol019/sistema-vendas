@@ -169,6 +169,7 @@
             this.txt_contato.Name = "txt_contato";
             this.txt_contato.Size = new System.Drawing.Size(1135, 59);
             this.txt_contato.TabIndex = 3;
+            this.txt_contato.TextChanged += new System.EventHandler(this.txt_contato_TextChanged);
             // 
             // txt_assunto
             // 

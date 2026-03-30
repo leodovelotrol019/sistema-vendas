@@ -211,6 +211,7 @@
             this.painel_principal.Name = "painel_principal";
             this.painel_principal.Size = new System.Drawing.Size(963, 487);
             this.painel_principal.TabIndex = 2;
+            this.painel_principal.Paint += new System.Windows.Forms.PaintEventHandler(this.painel_principal_Paint);
             // 
             // formPrincipal
             // 
@@ -249,7 +250,7 @@
         private System.Windows.Forms.Button menuCalculadora;
         private System.Windows.Forms.Button botao_funcionarios;
         private System.Windows.Forms.Button Chamados;
-        private System.Windows.Forms.Panel painel_principal;
+        public System.Windows.Forms.Panel painel_principal;
     }
 }
 

@@ -95,5 +95,10 @@ namespace sistema_vendas.Chamados
         {
 
         }
+
+        private void txt_contato_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

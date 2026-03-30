@@ -31,6 +31,9 @@
             this.labelListagemFuncionarios = new System.Windows.Forms.Label();
             this.botao_cadastrar_funcionario = new System.Windows.Forms.Button();
             this.painel_principal = new System.Windows.Forms.Panel();
+            this.panel_cima = new System.Windows.Forms.Panel();
+            this.panel_lista = new System.Windows.Forms.FlowLayoutPanel();
+            this.painel_principal.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelListagemFuncionarios
@@ -64,11 +67,33 @@
             // 
             // painel_principal
             // 
+            this.painel_principal.Controls.Add(this.panel_lista);
+            this.painel_principal.Controls.Add(this.panel_cima);
             this.painel_principal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.painel_principal.Location = new System.Drawing.Point(0, 0);
             this.painel_principal.Name = "painel_principal";
             this.painel_principal.Size = new System.Drawing.Size(1426, 839);
             this.painel_principal.TabIndex = 2;
+            this.painel_principal.Paint += new System.Windows.Forms.PaintEventHandler(this.painel_principal_Paint);
+            // 
+            // panel_cima
+            // 
+            this.panel_cima.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_cima.Location = new System.Drawing.Point(0, 0);
+            this.panel_cima.Name = "panel_cima";
+            this.panel_cima.Size = new System.Drawing.Size(1426, 100);
+            this.panel_cima.TabIndex = 0;
+            this.panel_cima.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cima_Paint);
+            // 
+            // panel_lista
+            // 
+            this.panel_lista.AutoScroll = true;
+            this.panel_lista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_lista.Location = new System.Drawing.Point(0, 100);
+            this.panel_lista.Name = "panel_lista";
+            this.panel_lista.Size = new System.Drawing.Size(1426, 739);
+            this.panel_lista.TabIndex = 1;
+            this.panel_lista.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_lista_Paint);
             // 
             // FormFuncionarios
             // 
@@ -83,6 +108,8 @@
             this.Name = "FormFuncionarios";
             this.Text = "Funcionários";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormFuncionarios_Load);
+            this.painel_principal.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,5 +120,7 @@
         private System.Windows.Forms.Label labelListagemFuncionarios;
         private System.Windows.Forms.Button botao_cadastrar_funcionario;
         private System.Windows.Forms.Panel painel_principal;
+        private System.Windows.Forms.FlowLayoutPanel panel_lista;
+        private System.Windows.Forms.Panel panel_cima;
     }
 }

@@ -219,6 +219,7 @@
             this.txtNomeCompleto.Name = "txtNomeCompleto";
             this.txtNomeCompleto.Size = new System.Drawing.Size(1230, 26);
             this.txtNomeCompleto.TabIndex = 1;
+            this.txtNomeCompleto.TextChanged += new System.EventHandler(this.txtNomeCompleto_TextChanged);
             // 
             // painelFormularioCadastrarFuncionario
             // 

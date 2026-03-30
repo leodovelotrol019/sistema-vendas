@@ -98,5 +98,10 @@ namespace sistema_vendas
             maskbox_tel.Clear();
             selec_depart.SelectedIndex = -1;
         }
+
+        private void txtNomeCompleto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
