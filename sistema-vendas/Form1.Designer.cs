@@ -40,7 +40,7 @@
             this.botao_produtos = new System.Windows.Forms.Button();
             this.botao_adicionar_itens = new System.Windows.Forms.Button();
             this.botao_fatura = new System.Windows.Forms.Button();
-            this.botao_registrar = new System.Windows.Forms.Button();
+            this.botao_dashboard = new System.Windows.Forms.Button();
             this.painel_principal = new System.Windows.Forms.Panel();
             this.menuPrincipal.SuspendLayout();
             this.painelMenuSuperior.SuspendLayout();
@@ -89,7 +89,7 @@
             this.painelMenuSuperior.Controls.Add(this.botao_produtos);
             this.painelMenuSuperior.Controls.Add(this.botao_adicionar_itens);
             this.painelMenuSuperior.Controls.Add(this.botao_fatura);
-            this.painelMenuSuperior.Controls.Add(this.botao_registrar);
+            this.painelMenuSuperior.Controls.Add(this.botao_dashboard);
             this.painelMenuSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.painelMenuSuperior.Location = new System.Drawing.Point(0, 24);
             this.painelMenuSuperior.Margin = new System.Windows.Forms.Padding(2);
@@ -191,18 +191,19 @@
             this.botao_fatura.Text = "Fatura";
             this.botao_fatura.UseVisualStyleBackColor = true;
             // 
-            // botao_registrar
+            // botao_dashboard
             // 
-            this.botao_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botao_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botao_registrar.ForeColor = System.Drawing.Color.White;
-            this.botao_registrar.Location = new System.Drawing.Point(16, 11);
-            this.botao_registrar.Margin = new System.Windows.Forms.Padding(2);
-            this.botao_registrar.Name = "botao_registrar";
-            this.botao_registrar.Size = new System.Drawing.Size(87, 37);
-            this.botao_registrar.TabIndex = 0;
-            this.botao_registrar.Text = "Registrar";
-            this.botao_registrar.UseVisualStyleBackColor = true;
+            this.botao_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botao_dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botao_dashboard.ForeColor = System.Drawing.Color.White;
+            this.botao_dashboard.Location = new System.Drawing.Point(7, 11);
+            this.botao_dashboard.Margin = new System.Windows.Forms.Padding(2);
+            this.botao_dashboard.Name = "botao_dashboard";
+            this.botao_dashboard.Size = new System.Drawing.Size(97, 37);
+            this.botao_dashboard.TabIndex = 0;
+            this.botao_dashboard.Text = "dashboard";
+            this.botao_dashboard.UseVisualStyleBackColor = true;
+            this.botao_dashboard.Click += new System.EventHandler(this.botao_dashboard_Click);
             // 
             // painel_principal
             // 
@@ -242,7 +243,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuSair;
         private System.Windows.Forms.ToolStripMenuItem submenuUsuarios;
         private System.Windows.Forms.Panel painelMenuSuperior;
-        private System.Windows.Forms.Button botao_registrar;
+        private System.Windows.Forms.Button botao_dashboard;
         private System.Windows.Forms.Button botao_fatura;
         private System.Windows.Forms.Button botao_shop;
         private System.Windows.Forms.Button botao_produtos;

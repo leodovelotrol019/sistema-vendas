@@ -35,7 +35,7 @@ namespace sistema_vendas.Chamados
             conn.Open();
 
 
-            string sql = @"SELECT Data, Nome, prioridade FROM tb_chamados";
+            string sql = @"SELECT data, nome, status, prioridade FROM tb_chamados";
             MySqlCommand comando = new MySqlCommand(sql, conn);
 
             MySqlDataReader reader = comando.ExecuteReader();
@@ -46,26 +46,49 @@ namespace sistema_vendas.Chamados
                 Panel card = new Panel();
                 card.Width = 200;
                 card.Height = 200;
-               
-                switch ((reader["prioridade"]))
+                
+                switch ((reader["status"].ToString().ToLower()))
                 {
-                    case (alta) :
-                        prioridade.BackColor = Color.DarkGreen;
+                    case "aberto":
+                        card.BackColor = Color.Red;
                         break;
-                        case    
+                    case "em andamento":
+                        card.BackColor = Color.Yellow;
+                        break;
+
+                    case "resolvido":
+                        card.BackColor = Color.DarkGreen;
+                        break;
+                    default:
+                        card.BackColor = Color.Blue;
+                        break;
+                }
+
+                string prioridade = reader["prioridade"].ToString().ToLower();
+
+                if(prioridade == "alta")
+                {
+                    Label alerta = new Label();
+                    alerta.Text = "ALTA";
+                    alerta.ForeColor = Color.Orange;
+                    alerta.Dock = DockStyle.Top;
+                    alerta.TextAlign = ContentAlignment.MiddleCenter;
+                    card.Controls.Add( alerta );
                 }
 
 
                 Label data = new Label();
                 data.ForeColor = Color.White;
-                data.BackColor = Color.DarkGreen;
                 data.Font = new Font("Arial", 12);
                 data.TextAlign = ContentAlignment.MiddleCenter;
                 data.AutoSize = false;
-                data.Text = reader["data"].ToString();
+                DateTime dataValor = Convert.ToDateTime(reader["data"]);
+                data.Text = dataValor.ToString("dd/MM/yyyy");
                 data.Dock = DockStyle.Top;
                 card.Controls.Add(data);
-                panel_lista.Controls.Add(card);
+               
+
+
 
                 Label nome = new Label();
                 nome.ForeColor = Color.White;
@@ -76,19 +99,27 @@ namespace sistema_vendas.Chamados
                 nome.Dock = DockStyle.Top;
                 card.Controls.Add(nome);
 
-                Label prioridade = new Label();
-                prioridade.ForeColor = Color.White;
-                prioridade.Font = new Font("Arial", 12);
-                prioridade.TextAlign = ContentAlignment.MiddleCenter;
-                prioridade.AutoSize = false;
-                prioridade.Text = reader["prioridade"].ToString();
-                prioridade.Dock = DockStyle.Top;
-                prioridade.Controls.Add(data);
+                Label status = new Label();
+                status.ForeColor = Color.White;
+                status.Font = new Font("Arial", 12);
+                status.TextAlign = ContentAlignment.MiddleCenter;
+                status.AutoSize = false;
+                status.Text = reader["status"].ToString();
+                status.Dock = DockStyle.Top;
+            
+
+               
+                card.Controls.Add(status);
+
                 panel_lista.Controls.Add(card);
-
-
 
 
             }
         }
+
+        private void panel_lista_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }

@@ -109,6 +109,7 @@
             this.panel_lista.Name = "panel_lista";
             this.panel_lista.Size = new System.Drawing.Size(1292, 693);
             this.panel_lista.TabIndex = 1;
+            this.panel_lista.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_lista_Paint);
             // 
             // form_chamados_listar
             // 
@@ -119,6 +120,7 @@
             this.Controls.Add(this.painel_de_cima);
             this.Controls.Add(this.painel_da_direita);
             this.Controls.Add(this.painel_da_esquerda);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "form_chamados_listar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "v";

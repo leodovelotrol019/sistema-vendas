@@ -66,5 +66,10 @@ namespace sistema_vendas
         {
 
         }
+
+        private void botao_dashboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
